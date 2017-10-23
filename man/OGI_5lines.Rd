@@ -3,9 +3,11 @@
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
 %%  ~~function to do ... ~~
+OGI_5lines
 }
 \description{
 %%  ~~ A concise (1-5 lines) description of what the function does. ~~
+  It computes OGI.
 }
 \usage{
 OGI_5lines(x)
@@ -14,10 +16,12 @@ OGI_5lines(x)
 \arguments{
   \item{x}{
 %%     ~~Describe \code{x} here~~
-}
+x:hoge
+  }
 }
 \details{
 %%  ~~ If necessary, more details than the description above ~~
+  nothing
 }
 \value{
 %%  ~Describe the value returned
@@ -31,9 +35,11 @@ OGI_5lines(x)
 }
 \author{
 %%  ~~who you are~~
+  Masaki Hamada
 }
 \note{
 %%  ~~further notes~~
+  This is a note.
 }
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
