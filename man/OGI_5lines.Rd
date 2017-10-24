@@ -7,21 +7,28 @@ OGI_5lines
 }
 \description{
 %%  ~~ A concise (1-5 lines) description of what the function does. ~~
-  It computes OGI.
+It computes OGI.
 }
 \usage{
-OGI_5lines(x)
+OGI_5lines(X)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{x}{
+  \item{X}{
 %%     ~~Describe \code{x} here~~
-x:hoge
-  }
+X: p-variate data matrix
+}
 }
 \details{
 %%  ~~ If necessary, more details than the description above ~~
-  nothing
+The Objective General Index (OGI) is the general index \\
+\begin{align*}
+  {\mbox{\boldmath g}} = \sum_{i=1}^p w_i{\mbox{\boldmath x_i}}
+\end{align*}
+which satisfies the following conditions: \\
+(i) $w_1, \ldots, w_p > 0$. \\
+(ii) $\text{Cov}({\mbox{\boldmath g}},w_i{\mbox{\boldmath x_i}})
+      = 1$ for each $i = 1,\ldots, p$.
 }
 \value{
 %%  ~Describe the value returned
@@ -35,11 +42,11 @@ x:hoge
 }
 \author{
 %%  ~~who you are~~
-  Masaki Hamada
+Masaki Hamada
 }
 \note{
 %%  ~~further notes~~
-  This is a note.
+This is the note.
 }
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
@@ -61,3 +68,4 @@ function (x)
 % R documentation directory.
 \keyword{ ~kwd1 }% use one of  RShowDoc("KEYWORDS")
 \keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
+
