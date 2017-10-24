@@ -1,18 +1,9 @@
-# Hello, world!
-#
-# This is an example function named 'hello'
-# which prints 'Hello, world!'.
-#
-# You can learn more about package authoring with RStudio at:
-#
-#   http://r-pkgs.had.co.nz/
-#
-# Some useful keyboard shortcuts for package authoring:
-#
-#   Build and Reload Package:  'Ctrl + Shift + B'
-#   Check Package:             'Ctrl + Shift + E'
-#   Test Package:              'Ctrl + Shift + T'
+# ogi_5lines.R: objective general index
 
-hello <- function() {
-  print("Hello, world!")
+ogi = function(X){
+  f = function(w, S) sum(-log(w)) + sum(w * (S%*%w)) / 2
+  gr = function(w, S) -1/w + S%*%w
+  S = cov(X) * (nrow(X)-1) / nrow(X)
+  w = optim(rep(1,ncol(X)), f, gr, S, method="L-BFGS-B", lower=0, upper=Inf)$par
+  list(g = X %*% w, X = X, w = w)
 }
