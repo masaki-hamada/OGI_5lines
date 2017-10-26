@@ -10,25 +10,21 @@ OGI_5lines
 It computes OGI.
 }
 \usage{
-OGI_5lines(X)
+ogi(X)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{X}{
 %%     ~~Describe \code{x} here~~
-X: p-variate data matrix
+p-variate data matrix
 }
 }
 \details{
 %%  ~~ If necessary, more details than the description above ~~
-The Objective General Index (OGI) is the general index \\
-\begin{align*}
-  {\mbox{\boldmath g}} = \sum_{i=1}^p w_i{\mbox{\boldmath x_i}}
-\end{align*}
-which satisfies the following conditions: \\
-(i) $w_1, \ldots, w_p > 0$. \\
-(ii) $\text{Cov}({\mbox{\boldmath g}},w_i{\mbox{\boldmath x_i}})
-      = 1$ for each $i = 1,\ldots, p$.
+The Objective General Index (OGI) is the general index g = w_1*x_1 + ... + w_p*x_p
+which satisfies the following conditions:
+(i) w_1, ..., w_p > 0
+(ii) Cov(g,w_i*x_i) = 1 for each i = 1,..., p.
 }
 \value{
 %%  ~Describe the value returned
@@ -55,17 +51,10 @@ This is the note.
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-##---- Should be DIRECTLY executable !! ----
-##-- ==>  Define data, use random,
-##--	or do  help(data=index)  for the standard data sets.
-
-## The function is currently defined as
-function (x)
-{
-  }
+X <- matrix(1:6, 2, 3)
+ogi(X)
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
 \keyword{ ~kwd1 }% use one of  RShowDoc("KEYWORDS")
 \keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
-
